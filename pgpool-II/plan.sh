@@ -16,7 +16,9 @@ pkg_build_deps=(
   core/make
 )
 pkg_bin_dirs=()
-pkg_binds_optional=()
+pkg_binds_optional=(
+  [database]="port"
+)
 pkg_lib_dirs=()
 pkg_exports=()
 pkg_exposes=()
