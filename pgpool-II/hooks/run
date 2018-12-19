@@ -1,3 +1,8 @@
 #!/bin/bash
 
-hab pkg exec {{pkg.origin}}/{{pkg.name}} pgpool -f {{pkg.svc_config_path}}/pgpool.conf
+exec 2>&1
+
+mkdir -p "{{pkg.svc_var_path}}/run/log"
+
+echo "Starting pgpool-II"
+exec pgpool -f "{{pkg.svc_config_path}}/pgpool.conf" --dont-detach
