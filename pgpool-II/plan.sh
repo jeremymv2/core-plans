@@ -17,7 +17,7 @@ pkg_build_deps=(
 )
 pkg_bin_dirs=(bin)
 pkg_binds_optional=(
-  [database]="port"
+  [database]="port superuser_name superuser_password"
 )
 pkg_lib_dirs=()
 pkg_exports=()
